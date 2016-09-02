@@ -17,8 +17,6 @@ public class StockWidgetService extends RemoteViewsService {
         return new RemoteViewsFactory() {
             private Cursor data = null;
 
-
-            @Override
             public void onCreate() {
             }
 
@@ -60,10 +58,8 @@ public class StockWidgetService extends RemoteViewsService {
                         data == null || !data.moveToPosition(position)) {
                     return null;
                 }
-
                 RemoteViews views = new RemoteViews(getPackageName(), R.layout.list_item_quote);
                 String symbol = data.getString(data.getColumnIndex("symbol"));
-
                 views.setTextViewText(R.id.stock_symbol, symbol);
                 views.setTextViewText(R.id.bid_price, data.getString(data.getColumnIndex("bid_price")));
                 views.setTextViewText(R.id.change, data.getString(data.getColumnIndex("percent_change")));

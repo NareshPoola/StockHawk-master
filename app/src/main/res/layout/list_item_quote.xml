@@ -3,46 +3,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="72dp"
+    android:background="@drawable/touch_selector_dark"
     android:gravity="center_vertical"
     android:orientation="horizontal"
     android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:background="@drawable/touch_selector_dark"
-    >
-  <TextView
-      android:id="@+id/stock_symbol"
-      android:fontFamily="sans-serif-condensed"
-      style="@style/StockSymbolTextStyle"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:gravity="start|center_vertical"
-      tools:text="@string/stock_symbol"
-      />
-  <LinearLayout
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_weight="1"
-      android:gravity="end"
-      >
+    android:paddingRight="16dp">
+
     <TextView
-        android:id="@+id/bid_price"
-        style="@style/BidPriceTextStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingRight="10sp"
-        android:fontFamily="sans-serif-condensed"
-        tools:text="@string/bid_price"
-        />
-    <TextView
-        android:id="@+id/change"
-        android:background="@drawable/percent_change_pill"
-        style="@style/PercentChangeTextStyle"
+        android:id="@+id/stock_symbol"
+        style="@style/StockSymbolTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed"
-        android:paddingLeft="3dp"
-        android:paddingRight="3dp"
-        tools:text="@string/bid_change"
-        />
-  </LinearLayout>
+        android:gravity="start|center_vertical"
+        tools:text="@string/stock_symbol"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="end">
+
+        <TextView
+            android:id="@+id/bid_price"
+            style="@style/BidPriceTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingRight="10sp"
+            tools:text="@string/bid_price" />
+
+        <TextView
+            android:id="@+id/change"
+            style="@style/PercentChangeTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/percent_change_pill"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            tools:text="@string/bid_change" />
+    </LinearLayout>
 </LinearLayout>

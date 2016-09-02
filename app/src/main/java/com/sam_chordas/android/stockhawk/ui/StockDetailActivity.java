@@ -1,9 +1,9 @@
 package com.sam_chordas.android.stockhawk.ui;
 
 import android.database.Cursor;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
@@ -80,17 +80,17 @@ public class StockDetailActivity extends AppCompatActivity implements
             maximumPrice = Math.max(maximumPrice, price);
         }
 
-        lineSet.setColor(Color.parseColor("#758cbb"))
-                .setFill(Color.parseColor("#2d374c"))
-                .setDotsColor(Color.parseColor("#758cbb"))
+        lineSet.setColor(ContextCompat.getColor(StockDetailActivity.this, R.color.colorWhite))
+                .setFill(ContextCompat.getColor(StockDetailActivity.this, R.color.material_blue_grey_700))
+                .setDotsColor(ContextCompat.getColor(StockDetailActivity.this, R.color.colorWhite))
                 .setThickness(4)
-                .setDashed(new float[]{10f, 10f});
+                .setDashed(new float[]{15f, 15f});
 
 
         lineChartView.setBorderSpacing(Tools.fromDpToPx(15))
                 .setYLabels(AxisController.LabelPosition.OUTSIDE)
                 .setXLabels(AxisController.LabelPosition.NONE)
-                .setLabelsColor(Color.parseColor("#6a84c3"))
+                .setLabelsColor(ContextCompat.getColor(StockDetailActivity.this, R.color.colorWhite))
                 .setXAxis(false)
                 .setYAxis(false)
                 .setAxisBorderValues(Math.round(Math.max(0f, minimumPrice - 5f)), Math.round(maximumPrice + 5f))
@@ -101,7 +101,7 @@ public class StockDetailActivity extends AppCompatActivity implements
         if (lineSet.size() > 1)
             lineChartView.show(anim);
         else
-            Toast.makeText(this, "No data", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "No data available", Toast.LENGTH_SHORT).show();
     }
 
     @Override
