@@ -3,11 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="72dp"
-    android:background="@drawable/touch_selector_dark"
     android:gravity="center_vertical"
     android:orientation="horizontal"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+    android:paddingEnd="@dimen/dimen_16"
+    android:paddingLeft="@dimen/dimen_16"
+    android:paddingRight="@dimen/dimen_16"
+    android:paddingStart="@dimen/dimen_16">
 
     <TextView
         android:id="@+id/stock_symbol"
@@ -16,7 +17,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed"
         android:gravity="start|center_vertical"
-        tools:text="@string/stock_symbol"/>
+        android:textSize="@dimen/textsize_16"
+        tools:text="@string/stock_symbol" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -30,7 +32,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:paddingRight="10sp"
+            android:paddingEnd="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10"
+            android:textSize="@dimen/textsize_16"
             tools:text="@string/bid_price" />
 
         <TextView
@@ -40,8 +44,11 @@
             android:layout_height="wrap_content"
             android:background="@drawable/percent_change_pill"
             android:fontFamily="sans-serif-condensed"
-            android:paddingLeft="3dp"
-            android:paddingRight="3dp"
+            android:paddingEnd="@dimen/dimen_3"
+            android:paddingLeft="@dimen/dimen_3"
+            android:paddingRight="@dimen/dimen_3"
+            android:paddingStart="@dimen/dimen_3"
+            android:textSize="@dimen/textsize_16"
             tools:text="@string/bid_change" />
     </LinearLayout>
 </LinearLayout>
