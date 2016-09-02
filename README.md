@@ -9,9 +9,9 @@
 
 ## Screens
 
- ![alt tag](https://postimg.org/image/uxni71p31/)
- ![alt tag](https://postimg.org/image/k6a5g9m03/)
- ![alt tag](https://postimg.org/image/r0ecdg0db/)
+ ![alt tag](https://s22.postimg.org/xez9eb8zl/Stock_List.png)
+ ![alt tag](https://s21.postimg.org/pugg75qcn/Stock_Details.png)
+ ![alt tag](https://s11.postimg.org/sffx261gj/Stock_Widget.png)
 
 
 
